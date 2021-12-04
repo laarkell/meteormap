@@ -16,7 +16,6 @@ fetch("./meteorite.json") //only works on web
    return response.json();
 })
 .then(data);
-
 // const data = require('./meteorite.json'); //need node module
 
 for (let i = 0; i < data.length; i++) {
