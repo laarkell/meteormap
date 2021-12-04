@@ -12,8 +12,5 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map);
 
 var marker = L.marker([51.5, -0.09]).addTo(map);
-var meteoritecoord = JSON.parse(meteorite);
-var geojsonFeature = {mydata[0]}
-};
 
 L.geoJSON(geojsonFeature).addTo(map);
