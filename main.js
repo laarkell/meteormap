@@ -15,11 +15,10 @@ fetch("./meteorite.json") //only works on web
 .then(response => {
    return response.json();
 })
-.then(data =>
+.then(data);
 
 // const data = require('./meteorite.json'); //need node module
 
 for (let i = 0; i < data.length; i++) {
   var marker = L.marker([data[i].reclat, data[i].reclong]).addTo(map);
 };
-);
