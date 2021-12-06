@@ -21,7 +21,7 @@ fetch('./meteorite.json')
   .then(response => response.json())
   .then(data => {
     if (!data || data.length < 1) return console.log("no data");
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < 10000; i++) {
         if (!data[i].reclat || !data[i].reclong) continue;
         console.log(data[i]);
         markers.push(L.marker([data[i].reclat, data[i].reclong], {icon: metIcon}).addTo(map));
