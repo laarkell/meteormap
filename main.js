@@ -11,6 +11,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
 }).addTo(map);
 
+var metIcon = L.icon({
+    iconUrl: 'dot.png',
+    iconSize:     [30, 30], // size of the icon
+});
+
 var markers = [];
 fetch('./meteorite.json')
   .then(response => response.json())
@@ -19,7 +24,7 @@ fetch('./meteorite.json')
     for (let i = 0; i < 20; i++) {
         if (!data[i].reclat || !data[i].reclong) continue;
         console.log(data[i]);
-        markers.push(L.marker([data[i].reclat, data[i].reclong]).addTo(map));
+        markers.push(L.marker([data[i].reclat, data[i].reclong], {icon: metIcon}).addTo(map));
       };
       console.log("markers added =", markers.length); // now you can access all the markers in this array
   })
