@@ -13,7 +13,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var metIcon = L.icon({
     iconUrl: 'dot.png',
-    iconSize:     [5, 5], // size of the icon
+    iconSize:     [1, 1], // size of the icon
 });
 
 var markers = [];
